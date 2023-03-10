@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira pagina de formulario</title>
+    <style>
+        body{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        ;}
+    </style>
+</head>
+<body>
+    <h1>meu primeiro fomulario 
+    </h1>
+    <form action="Cadastro.php" method="post">
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p> <!---Lembrando a tag "name" ta mais correlacioanda com PHP , enquanto a tag ID funcina mais para Java Script, -->
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+        <!-- A lingagem do label , serve para correlacionar a palavra e o objetivo do fomrualrio. alem disso quadnor ussa label quando vc clica em cima da plavra vai para o campo , isso serve para em celulares, ajudar a clicar no campo certo  -->
+        <!-- Sempre, precisa fazer o label , NAO PODE PULAR!!!-->
+    </form>
+
+
+    <h2>Meteodos de envio de formulario</h2>
+    <p>Quando vc esta no padrao de envio de formualario eles aparecem na url</p>
+    <p>existem 2 metodos, Se nao se escreve nada se usa o meotodo "GET" , o outro metodo pode usar o metodo POST</p>
+    <p>quando se usa POST aparce em cima, o arquivo PHP mas mesmo assim , ele nao é seguro, se for em insepcionar e network vc descobre em name --> header --> cadastro.php  o que foi enviado. </p>
+    <p>o unico jeito de proteger mesmo o dados precisa criptografar os dados e usar https </p>
+    <h2>quando usar cada um?</h2>
+    <p>quando vc quer compartilhar se usa o GET. Quando vc nao quer compartilhar dados sensiveis</p>
+    <p>quando vc quere um pouco mais de segurança se usa o metodo POST</p>
+    <p>quando se manda por GET pode enviar ate 3mil bytes , ou seja 3 mil letras, tambem nao pode se usar envio de dados e etc.</p>
+    <p>nao existe mais grande diferença de velociade entre GET e POST</p>
+</body>
+</html>
